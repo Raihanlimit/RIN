@@ -9,7 +9,7 @@ export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
             command: 'sticker',
-            aliases: ['s'],
+            aliases: ['s, stiker, sk'],
             description: 'Converts images/videos into stickers',
             category: 'utils',
             usage: `${client.config.prefix}sticker [(as caption | tag)[video | image]]`,
@@ -78,8 +78,8 @@ export default class Command extends BaseCommand {
             })()
             return {
                 categories,
-                pack: pack[1] || '🎗 𝚁𝚒𝚗 𝙱𝚘𝚝𝚝𝚘 ',
-                author: pack[2] || '𝙹𝙹-𝙾𝚛𝚎𝚔𝚒 🎗',
+                pack: pack[1] || 'ʀᴇɴ',
+                author: pack[2] || 'ʙᴏᴛ',
                 quality,
                 type: StickerTypes[
                     parsedArgs.flags.includes('--crop') || parsedArgs.flags.includes('--c')
