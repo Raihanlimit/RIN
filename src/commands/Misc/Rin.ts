@@ -8,10 +8,10 @@ import { ISimplifiedMessage } from '../../typings'
 export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
-            command: 'rin',
+            command: 'ren',
             description: 'Displays the info.',
             category: 'misc',
-            usage: `${client.config.prefix}rin`
+            usage: `${client.config.prefix}ren`
         })
     }
 
@@ -22,7 +22,7 @@ export default class Command extends BaseCommand {
         let rin = n[Math.floor(Math.random() * n.length)]
         return void this.client.sendMessage(M.from, { url: rin }, MessageType.video, {quoted:M.WAMessage,
             mimetype: Mimetype.gif,
-            caption: `🎗 Rin\n\n⚜ *Description: Maintained fork of void* \n\n ⭐*URL-https://github.com/Oreki-san/RIN* \n` }
+            caption: `🎗 RenBot\n\n⚜ *Description: Maintained fork of void* \n\n ⭐*URL-https://github.com/Oreki-san/RIN* \n` }
         )
     }
 }
